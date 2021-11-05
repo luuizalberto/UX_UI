@@ -12,3 +12,40 @@
 }
 
 .clear{clear: both;}
+
+header{
+    background-color: #333;
+    padding: 8px 0;
+}
+
+.logo-desktop{
+    float: left;
+}
+
+.logo-desktop a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+nav.desktop{
+    float: right;
+}
+
+nav.desktop ul{
+
+}
+
+nav.desktop li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav.desktop a{
+    color: white;
+    text-decoration: none;
+}
+
+nav.desktop a:hover{
+    text-decoration: underline;
+}
