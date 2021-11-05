@@ -71,6 +71,7 @@ nav.desktop a:hover{
         font-size: 18px;
         color: white;
         text-decoration: none;
+        text-decoration: none;
     }
 
     nav.mobile h3{
@@ -82,10 +83,22 @@ nav.desktop a:hover{
     }
 
     nav.mobile ul{
+        display: none;
+        background-color: #333;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        top: 29px;
+        left: -2%;
+        width: 104%;
         text-align: center;
+    }
+
+    nav.mobile li{
+        padding: 8px 0;
+        border-top: 1px groove white;
+    }
+
+    nav.mobile a{
+        text-decoration: none;
+        color: white;
     }
 }
