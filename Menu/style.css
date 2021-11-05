@@ -28,6 +28,8 @@ header{
     text-decoration: none;
 }
 
+nav.mobile{display: none;}
+
 nav.desktop{
     float: right;
 }
@@ -48,4 +50,42 @@ nav.desktop a{
 
 nav.desktop a:hover{
     text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .logo-desktop,
+    nav.desktop{
+        display: none;
+    }
+
+    nav.mobile{
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-mobile a{
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav.mobile h3{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav.mobile ul{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
