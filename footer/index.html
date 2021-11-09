@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <title>Footers | UI/UX</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        section{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        footer.one{
+            padding: 20px 0;
+            width: 100%;
+            background-color: #1de9b6;
+        }
+
+        .footer-single{
+            width: 33.3%;
+            padding: 0 15px;
+            color: white;
+        }
+
+        .footer-single h2{
+            font-weight: normal;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-single p{
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        /* .social-media{margin-top: 10px;} */
+
+        .footer-single a{
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        footer.two{
+            padding: 8px 0;
+            text-align: center;
+            color: white;
+            background-color: #00bfa5;
+        }
+
+        @media screen and (max-width:768px){
+            .footer-single{
+                width: 100%;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <footer class="one">
+            <div class="container">
+                <div class="footer-single">
+                    <h2>Sobre:</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis perspiciatis aliquam quae quisquam debitis eveniet explicabo labore incidunt mollitia! Magni, necessitatibus quisquam! Corporis placeat ipsum obcaecati quis rem sunt dicta?</p>
+                </div><!--footer-single-->
+
+                <div class="footer-single">
+                    <h2>Telefone:</h2>
+                    <p><i class="fas fa-phone-alt"></i> (75)99999-9999</p>
+                    <p><i class="fas fa-phone-alt"></i> (75)99999-9999</p>
+                </div><!--footer-single-->
+
+                <div class="footer-single">
+                    <h2>Conecte-se conosco:</h2>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    </div><!--social-media-->
+                </div><!--footer-single-->
+            </div><!--container-->
+        </footer>
+        <footer class="two">
+            Todos os direitos reservados!
+        </footer>
+    </section>
+    
+</body>
+</html>
