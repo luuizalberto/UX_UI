@@ -1,20 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário | UI/UXt</title>
+    <title>Formulário | UI/UX</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{background-color: #562ead;}
+
+        .container{
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        section.formulario{
+            padding: 90px 0;
+        }
+
+        .form-group input[type=text]{
+            width: 100%;
+            height: 40px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-group textarea{
+            width: 100%;
+            height: 120px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            resize: vertical;
+        }
+
+        .form-group input[type=submit]{
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+            background-color: deeppink;
+            border: 0;
+            color: white;
+            margin-top: 10px;
+        }
+
+
+    </style>
 </head>
 <body>
     
+    <section class="formulario">
+        <div class="container">
+            <div class="form-group">
+                <span></span>
+                <input type="text" name="nome" placeholder="Nome...">
+            </div><!--form-group-->
+    
+            <div class="form-group">
+                <span></span>
+                <input type="text" name="email" placeholder="E-mail...">
+            </div><!--form-group-->
+    
+            <div class="form-group">
+                <span></span>
+                <textarea placeholder="Sua mensagem..."></textarea>
+            </div><!--form-group-->
+    
+            <div class="form-group">
+                <span></span>
+                <input type="submit" value="Enviar!">
+            </div><!--form-group-->
+        </div><!--container-->
+    </section>
+
+
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        $(function(){
+            $('form').submit(function(){
+                return false;
+            })
+        })
 
 
-        
     </script>
 </body>
 </html>
