@@ -11,6 +11,7 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            outline: none;
         }
 
         body{background-color: #562ead;}
@@ -51,6 +52,24 @@
             margin-top: 10px;
         }
 
+        .form-group span{
+            color: rgb(255, 75, 75);
+            display: inline-block;
+            padding: 4px 0;
+        }
+
+        .box-sucesso{
+            display: none;
+            width: 35%;
+            background-color: springgreen;
+            color: black;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
 
     </style>
 </head>
@@ -58,25 +77,28 @@
     
     <section class="formulario">
         <div class="container">
-            <div class="form-group">
-                <span></span>
-                <input type="text" name="nome" placeholder="Nome...">
-            </div><!--form-group-->
-    
-            <div class="form-group">
-                <span></span>
-                <input type="text" name="email" placeholder="E-mail...">
-            </div><!--form-group-->
-    
-            <div class="form-group">
-                <span></span>
-                <textarea placeholder="Sua mensagem..."></textarea>
-            </div><!--form-group-->
-    
-            <div class="form-group">
-                <span></span>
-                <input type="submit" value="Enviar!">
-            </div><!--form-group-->
+            <form action="">
+                <div class="form-group">
+                    <span></span>
+                    <input type="text" name="nome" placeholder="Nome...">
+                </div><!--form-group-->
+        
+                <div class="form-group">
+                    <span></span>
+                    <input type="text" name="email" placeholder="E-mail...">
+                </div><!--form-group-->
+        
+                <div class="form-group">
+                    <span></span>
+                    <textarea placeholder="Sua mensagem..." name="mensagem"></textarea>
+                </div><!--form-group-->
+        
+                <div class="form-group">
+                    <span></span>
+                    <input type="submit" value="Enviar!">
+                </div><!--form-group-->
+            </form>
+            <div class="box-sucesso">Sua mensagem foi enviada com sucesso!</div>
         </div><!--container-->
     </section>
 
@@ -89,8 +111,53 @@
     <script>
         $(function(){
             $('form').submit(function(){
+
+                var erro = false;
+                var nome = $('[name=nome]').val();
+                var email = $('[name=email]').val();
+                var mensagem = $('[name=mensagem]').val();
+                resetForm();
+                // validação quando o input não for preenchido
+                if(nome == ''){
+                    erro = true;
+                    var el = $('[name=nome]');
+                    el.parent().find('span').html('Por favor insira seu nome.')
+                    el.css('border','2px solid red');
+                }
+
+                // validação quando o input não for preenchido
+                if(email == ''){
+                    erro = true;
+                    var el = $('[name=email]');
+                    el.parent().find('span').html('Por favor insira seu e-mail.')
+                    el.css('border','2px solid red');
+                }
+
+                //validação quando o textarea não for preenchido
+                 if(mensagem == ''){
+                    erro = true;
+                    var el = $('[name=mensagem]');
+                    el.parent().find('span').html('Por favor insira sua mensagem.')
+                    el.css('border','2px solid red');
+                }
+
+                if(erro == false){
+                    $('.box-sucesso').fadeIn(function(){
+                        setTimeout(function(){
+                            $('.box-sucesso').fadeOut();
+                        },5000);
+                    });
+                    $(this)[0].reset();
+                }
+
                 return false;
             })
+
+
+            function resetForm(){
+                $('input[type=text],textarea').css('border','1px solid #ccc');
+                $('span').html('');
+            }
         })
 
 
