@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips | UI/UX</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        .container p{margin-top: 10px;}
+
+        .container p.tooltip-box{
+            border-bottom: 1px dotted #CCC;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tooltip{
+            text-align: center;
+            display: none;
+            position: absolute;
+            top: 16px;
+            right: 0px;
+            width: 120px;
+            padding: 3px 4px;
+            background-color: rgba(0, 0, 0, 0.719);
+            color: white;
+            border-radius: 5px;
+        }
+
+        p.tooltip-box:hover .tooltip{display: block;}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="tooltip-box"><span class="tooltip">Aqui está a minha tooltip</span>Lorem ipsum dolor sit.</p>
+    </div><!--container-->
+    
+</body>
+</html>
