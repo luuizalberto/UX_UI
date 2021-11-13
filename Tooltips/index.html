@@ -30,24 +30,26 @@
 
         .tooltip{
             text-align: center;
-            display: none;
+            opacity: 0;
+            transition: 1s;
             position: absolute;
             top: 16px;
-            right: 0px;
+            right: -50px;
             width: 120px;
             padding: 3px 4px;
-            background-color: rgba(0, 0, 0, 0.719);
+            background-color: rgba(0, 0, 0, 0.863);
             color: white;
             border-radius: 5px;
         }
 
-        p.tooltip-box:hover .tooltip{display: block;}
+        p.tooltip-box:hover .tooltip{opacity: 1; right: 0px;}
     </style>
 </head>
 <body>
 
     <div class="container">
-        <p class="tooltip-box"><span class="tooltip">Aqui está a minha tooltip</span>Lorem ipsum dolor sit.</p>
+        <p class="tooltip-box"><span class="tooltip">Aqui está a minha tooltip</span><i class="fas fa-question-circle"></i> Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus et eius facilis commodi a eaque omnis voluptate, ea maiores! Suscipit consequuntur perferendis debitis voluptate illum facere aut porro possimus quis?Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div><!--container-->
     
 </body>
